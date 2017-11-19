@@ -1,1 +1,15 @@
 
+#Build and tag docker image
+docker build -t "wildfly-11.0.0:local" .
+
+#List all docker images
+docker images -a
+
+#To remove untagged images
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+
+#Delete all containers
+docker rm $(docker ps -a -q)
+
+#Delete all images
+docker rmi $(docker images -q)
