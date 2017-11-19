@@ -53,4 +53,13 @@ Processing triggers for man-db (2.7.5-1) ...
 root@aimscare-devbox:/home/aimscare# sudo docker run hello-world
 
 
+To create the docker group and add your user:
+
+Create the docker group.
+
+$ sudo groupadd docker
+Add your user to the docker group.
+
+$ sudo usermod -aG docker $USER
+
 
